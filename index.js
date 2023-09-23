@@ -24,6 +24,8 @@ app.get('/tasks', tasksService.getTasks);
 
 app.post('/toko', tokoService.addData);
 app.get('/toko', tokoService.getData);
+app.get('/toko/getTotal', tokoService.getTotalPrice);
+app.get('/toko/getItems/:item_name', tokoService.getDataItems);
 app.delete('/toko/:user_id', tokoService.deleteDataById);
 app.put('/toko/update/:user_id', tokoService.updateDataById);
 

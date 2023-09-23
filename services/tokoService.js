@@ -28,6 +28,25 @@ export const getData = async (req, res, next) => {
         next(error)
     }
 }
+
+export const getDataItems = async (req, res, next) => {
+    try {
+        let item_name = req.params.item_name; 
+        let [result] = await Repo.getDataItem(item_name);
+        successResponse(res, "success", result);
+    } catch (error) {
+        next(error);
+    }
+}
+
+export const getTotalPrice = async (req, res, next) => {
+    try{
+        let [result] = await Repo.getTotalPrice()
+        successResponse(res, "success", result)
+    }catch(error){
+        next(error)
+    }
+}
 export const deleteDataById = async (req, res, next) => {
     try {
         let user_id = req.params.user_id;
