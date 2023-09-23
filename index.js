@@ -14,7 +14,7 @@ app.use(express.json())
 
 
 
-// unjuk keterampilan integrasi API sistem sederhana toko buah online
+// integrasi API sistem sederhana toko buah online
 
 // membuat raw / data baru
 app.post('/toko', tokoService.addData);
