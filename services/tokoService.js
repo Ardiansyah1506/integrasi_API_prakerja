@@ -28,11 +28,28 @@ export const getData = async (req, res, next) => {
         next(error)
     }
 }
+export const getDataDescByPcs = async (req, res, next) => {
+    try{
+        let [result] = await Repo.getDataDescByPcs()
+        successResponse(res, "success", result)
+    }catch(error){
+        next(error)
+    }
+}
 
 export const getDataItems = async (req, res, next) => {
     try {
         let item_name = req.params.item_name; 
         let [result] = await Repo.getDataItem(item_name);
+        successResponse(res, "success", result);
+    } catch (error) {
+        next(error);
+    }
+}
+export const getItemsPrice = async (req, res, next) => {
+    try {
+        let item_name = req.params.item_name; 
+        let [result] = await Repo.getItemsPrice(item_name);
         successResponse(res, "success", result);
     } catch (error) {
         next(error);

@@ -21,13 +21,7 @@ export const getDataById = (id) => {
     return dbPool.query(sql, values)
 }
 
-export const updateData = () => {
 
-}
-
-export const deleteData = () => {
-    
-}
 
 export const getDataByEmail = (email) => {
     const sql = "SELECT user_id, name, email, password, created_at FROM users WHERE email = ?";
