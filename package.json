@@ -1,0 +1,20 @@
+{
+  "name": "todo-list-express",
+  "version": "1.0.0",
+  "description": "example code todo list for kelas.com batch 8",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Fauzi Ardiansyah",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.6.1",
+    "nanoid": "^4.0.2",
+    "nodemon": "^3.0.1"
+  }
+}
